@@ -61,7 +61,7 @@ export default function DownloadModal({
       ? await getQueimadas({ municipio: municipio, source: source, simplified: isSimplifiedDatas })
       : {};
 
-    let dataStr = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+    let dataStr = 'data:Application/Json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
 
     anchor.href = dataStr;
 
@@ -73,7 +73,7 @@ export default function DownloadModal({
 
   const createDownloadAnchor = () => {
     let anchor = document.createElement('a');
-    anchor.download = '.json';
+    anchor.download = 'map.json';
 
     return anchor;
   };
